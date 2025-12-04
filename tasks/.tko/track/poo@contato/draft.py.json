@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-02_22-15-40",
+            "content": "@@ -649,590 +649,4 @@\n ex):\n-%0A        if 0 %3C= index %3C len(self.fones):%0A            self.fones.pop(index)%0A%0A    def tfav(self):%0A        self.favorited = not self.favorited%0A%0A    def __str__(self):%0A        prefix = %22@%22 if self.favorited else %22- %22%0A        lista = %22, %22.join(str(f) for f in self.fones)%0A        return f%22%7Bprefix%7D%7Bself.name%7D %5B%7Blista%7D%5D%22%0A%0A%0Adef main():%0A    contact = Contact()%0A    while False:%0A        line = input().strip()%0A        if line == %22 %22:%0A            continue%0A        print(%22$%22 + line)%0A        args = line.split()%0A%0A        if args%5B0%5D == %22init%22:%0A            print($end)%0A            break%0A            \n",
+            "lines": "30"
+        },
+        {
+            "label": "2025-12-02_22-23-27",
+            "content": "@@ -1170,19 +1170,20 @@\n %5B0%5D == %22\n-end\n+init\n %22:%0A     \n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-12-02_22-23-41",
+            "content": "@@ -1016,17 +1016,16 @@\n  False:%0A\n-%0A\n         \n@@ -1222,312 +1222,16 @@\n eak%0A\n-%0A        elif args%5B0%5D == %22init%22:%0A            name = args%5B1%5D if len(args) %3E 1 else %22%22%0A            contact = Contact(name)%0A%0A        elif args%5B0%5D == %22show%22:%0A            print(contact)%0A%0A        elif args%5B0%5D == %22add%22:%0A            label = args%5B1%5D%0A            number = args%5B2%5D%0A            cantact.add(label, number)\n+            \n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-12-02_22-27-05",
+            "content": "@@ -1531,226 +1531,4 @@\n ber)\n-%0A%0A        elif args%5B0%5D == %22rm%22:%0A            index = int(args%5B1%5D)%0A            contact.rm(index)%0A%0A        elif args%5B0%5D == %22tfav%22:%0A            contact.tfav()%0A%0A        else:%0A            print(%22fail: comando invalido%22)%0A%0A%0Amain()\n",
+            "lines": "67"
+        },
+        {
+            "label": "2025-12-02_22-28-58",
+            "content": "@@ -1009,19 +1009,20 @@\n   while \n-Tru\n+Fals\n e:%0A%0A    \n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-12-02_22-29-17",
+            "content": "@@ -1067,16 +1067,17 @@\n ine == %22\n+ \n %22:%0A     \n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-12-02_22-29-28",
+            "content": "@@ -1197,14 +1197,12 @@\n int(\n-%22\n $end\n-%22\n )%0A  \n@@ -1496,25 +1496,25 @@\n            c\n-o\n+a\n ntact.add(la\n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-12-02_22-31-36",
+            "content": "@@ -1171,24 +1171,50 @@\n %5D == %22end%22:%0A\n+            print(%22$end%22)%0A\n             \n",
+            "lines": "80"
+        },
+        {
+            "label": "2025-12-02_22-32-42",
+            "content": "@@ -829,17 +829,16 @@\n fix = %22@\n- \n %22 if sel\n@@ -856,16 +856,17 @@\n  else %22-\n+ \n %22%0A      \n",
+            "lines": "79"
+        },
+        {
+            "label": "2025-12-02_22-36-20",
+            "content": "@@ -857,17 +857,16 @@\n  else %22-\n- \n %22%0A      \n",
+            "lines": "79"
+        },
+        {
+            "label": "2025-12-02_22-36-28",
+            "content": "class Fone:\n    def __init__(self, label, number):\n        self.label = label\n        self.number = number\n\n    def __str__(self):\n        return f\"{self.label}:{self.number}\"\n\n    \ndef is_valid(number):\n    valid = \"0123456789().\"\n    for c in number:\n        if c not in valid:\n            return False\n    return True\n\n\nclass Contact:\n    def __init__(self, name=\"\"):\n        self.name = name\n        self.fones = []\n        self.favorited = False\n\n    def add(self, label, number):\n        if not is_valid(number):\n            print(\"fail: invalid number\")\n            return\n        self.fones.append(Fone(label, number))\n\n    def rm(self, index):\n        if 0 <= index < len(self.fones):\n            self.fones.pop(index)\n\n    def tfav(self):\n        self.favorited = not self.favorited\n\n    def __str__(self):\n        prefix = \"@ \" if self.favorited else \"- \"\n        lista = \", \".join(str(f) for f in self.fones)\n        return f\"{prefix}{self.name} [{lista}]\"\n\n\ndef main():\n    contact = Contact()\n    while True:\n\n        line = input().strip()\n        if line == \"\":\n            continue\n        print(\"$\" + line)\n        args = line.split()\n\n        if args[0] == \"end\":\n            break\n\n        elif args[0] == \"init\":\n            name = args[1] if len(args) > 1 else \"\"\n            contact = Contact(name)\n\n        elif args[0] == \"show\":\n            print(contact)\n\n        elif args[0] == \"add\":\n            label = args[1]\n            number = args[2]\n            contact.add(label, number)\n\n        elif args[0] == \"rm\":\n            index = int(args[1])\n            contact.rm(index)\n\n        elif args[0] == \"tfav\":\n            contact.tfav()\n\n        else:\n            print(\"fail: comando invalido\")\n\n\nmain()",
+            "lines": "79"
+        }
+    ]
+}

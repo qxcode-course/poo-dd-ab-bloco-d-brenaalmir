@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-03_01-11-53",
+            "content": "@@ -1,217 +0,0 @@\n-class Operation:%0A    def __init__(self, op_id, label, value):%0A        self.id = op_id%0A        self.label = label%0A        self.value = value%0A%0A    def __str__(self):%0A        return f%22%7Bself.id%7D:%7Bself.label%7D:%7Bself.value%7D%22\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-12-03_01-48-11",
+            "content": "class Operation:\n    def __init__(self, op_id, label, value):\n        self.id = op_id\n        self.label = label\n        self.value = value\n\n    def __str__(self):\n        return f\"{self.id}:{self.label}:{self.value}\"",
+            "lines": "8"
+        }
+    ]
+}

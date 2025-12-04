@@ -1,0 +1,144 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-03_01-11-18",
+            "content": "@@ -1,935 +0,0 @@\n-class Transaction:%0A    def  __init__(self, tid, label, client, value):%0A        self.id = tid%0A        self.label = label%0A        self.client = client%0A        self.value = value%0A%0A    def __str__(self):%0A        return f%22id:%7Bself.id%7D %7Bself.label%7D:%7Bself.client%7D %7Bself.value%7D%22%0A%0Aclass Client:%0A    def __init__(self, codename, limit):%0A        self.codename = codename%0A        self.limit = limit%0A        self.ops = %5B%5D%0A%0A    def addOp(self, op):%0A        self.ops.append(op)%0A%0A    def getBalance(self):%0A        total = 0%0A        for op in self.ops:%0A            if op.label == %22give%22:%0A                total += op.value%0A            elif op.label in %5B%22take%22, %22plus%22%5D:%0A                total -= op.value%0A        return total%0A%0A    def __str__(self):%0A        return f%22%7Bself.codename%7D %7Bself.getBalance()%7D/%7Bself.limit%7D%22%0A%0A%0Aclass Agiota:%0A    def __init__(self):%0A        self.clients = %5B%5D%0A        self.dead = %5B%5D%0A        self.trans = %5B%5D%0A        self.nextId = %5B%5D\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-12-03_01-23-24",
+            "content": "@@ -930,987 +930,6 @@\n d = \n-0%0A%0A    def findClient(self, name, inDead=True):%0A        base = self.dead if inDead else self.clients%0A        for c in base:%0A            if c.codename == name:%0A                return c%0A        return%0A%0A    def addClient(self, name, limit):%0A        if self.findClient(name) is not None:%0A            print(%22fail: cliente ja existe%22)%0A            return%0A        self.clients.append(Client(name, limit))%0A        self.clients.sort(key=lambda c: c.codename)%0A%0A    def newTransaction(self, label, client, value):%0A        op = Transaction(self.nextId, label, client.codename, value)%0A        self.nextId += 1%0A        self.trans.append(op)%0A        client.addOp(op)%0A%0A    def give(self, name, value):%0A        cli = self.findClient(name)%0A        if cli is None:%0A            print(%22fail: cliente nao existe%22)%0A            return%0A        if cli.getBalance() + value %3E cli.limit:%0A            print(%22fail: limite excedido%22)%0A            return%0A        self.newTransation(%22give%22, cli, value)%0A%0A    def take()\n+%5B%5D\n",
+            "lines": "38"
+        },
+        {
+            "label": "2025-12-03_18-20-33",
+            "content": "@@ -1912,961 +1912,5 @@\n ake(\n-self, name, value):%0A        cli = self.findClient(name)%0A        if cli is None:%0A            print(%22fail: cliente nao existe%22)%0A            return%0A        self.newTransaction(%22fail: cliente nao existe%22)%0A%0A    def kill(self, name):%0A        cli = self.findClient(name)%0A        if cli is None:%0A            print(%22fail: cliente nao existe%22)%0A            return%0A        self.clients.remove(cli)%0A        self.dead.append(cli)%0A        self.dead.sort(key=lambda c: c.codename)%0A        aliveTrans = %5B%5D%0A        for op in self.trans:%0A            if op.client != name:%0A                aliveTrans.append(op)%0A        self.trans = aliveTrans%0A%0A    def plus(self):%0A        toKill = %5B%5D%0A        for cli in self.clients:%0A            juros = int((cli.getBalance * 0.10) + 0.9999)%0A            self.newTransaction(%22plus%22, cli, juros)%0A            if cli.getBalance() %3E cli.limit:%0A                toKill.append(cli.codename)%0A        for name in toKill:%0A            self.kill(name)%0A%0A    \n+)\n",
+            "lines": "70"
+        },
+        {
+            "label": "2025-12-03_18-33-10",
+            "content": "@@ -2869,1420 +2869,4 @@\n     \n-def show(self):%0A        for c in self.clients:%0A            print(f%22:) %7Bc%7D%22)%0A        for op in self.trans:%0A            print(f%22+ %7Bop%7D%22)%0A        for d in self.dead:%0A            print(f%22:( %7Bd%7D%22)%0A            for op in d.ops:%0A                print(f%22- id:%7Bop.id%7D %7Bop.label%7D:%7Bop.client%7D %7Bop.value%7D%22)%0A%0A    def showCli(self, name):%0A        cli = self.findClient(name) or self.findClient(name, True)%0A        if cli is None:%0A            print(%22fail: cliente nao existe%22)%0A            return%0A        print(cli)%0A        for op in cli.ops:%0A            print(f%22id:%7Bop.id%7D %7Bop.label%7D:%7Bop.client%7D %7Bop.value%7D%22)%0A%0Adef main():%0A    agiota = Agiota()%0A    while True:%0A        line = input().split()%0A        if line == %22%22:%0A            continue%0A        print(%22$%22 + line)%0A        args = line.split()%0A%0A        if args%5B0%5D == %22end%22:%0A            print(%22$end%22)%0A            break%0A%0A        elif args%5B0%5D == %22addCli%22:%0A            agiota.addClient(args%5B1%5D, int(args%5B2%5D))%0A%0A        elif args%5B0%5D == %22give%22:%0A            agiota.give(args%5B1%5D, int(args%5B2%5D))%0A%0A        elif args%5B0%5D == %22take%22:%0A            agiota.take(args%5B1%5D, int(args%5B2%5D))%0A%0A        elif args%5B0%5D == %22show%22:%0A            agiota.show()%0A%0A        elif args%5B0%5D == %22showCli%22:%0A            agiota.showCli(args%5B1%5D)%0A%0A        elif args%5B0%5D == %22kill%22:%0A            agiota.kill(args%5B1%5D)%0A%0A        elif args%5B0%5D == %22plus%22:%0A            agiota.plus()%0A%0A        else:%0A            print(%22fail: comando invalido%22)%0A%0Amain()\n",
+            "lines": "101"
+        },
+        {
+            "label": "2025-12-04_00-17-53",
+            "content": "@@ -1865,25 +1865,24 @@\n lf.newTransa\n-c\n tion(%22give%22,\n@@ -2086,25 +2086,33 @@\n on(%22\n-take%22, cli, value\n+fail: cliente nao existe%22\n )%0A%0A \n@@ -2644,18 +2644,16 @@\n tBalance\n-()\n  * 0.10)\n@@ -3537,12 +3537,12 @@\n ().s\n-trip\n+plit\n ()%0A \n",
+            "lines": "157"
+        },
+        {
+            "label": "2025-12-04_00-23-51",
+            "content": "@@ -3663,16 +3663,42 @@\n  %22end%22:%0A\n+            print(%22$end%22)%0A\n         \n",
+            "lines": "157"
+        },
+        {
+            "label": "2025-12-04_00-25-13",
+            "content": "@@ -1122,141 +1122,14 @@\n     \n-if checkDead:%0A            for c in self.dead:%0A                if c.codename == name:%0A                    return c%0A        return None\n+return\n %0A%0A  \n@@ -1649,14 +1649,8 @@\n name\n-, None\n )%0A  \n@@ -1955,39 +1955,32 @@\n .findClient(name\n-, False\n )%0A        if cli\n@@ -2121,32 +2121,32 @@\n ll(self, name):%0A\n+\n         cli = se\n@@ -2167,15 +2167,8 @@\n name\n-, False\n )%0A  \n",
+            "lines": "156"
+        },
+        {
+            "label": "2025-12-04_00-31-43",
+            "content": "@@ -1117,26 +1117,29 @@\n %0A        if \n-in\n+check\n Dead:%0A      \n@@ -1766,36 +1766,35 @@\n indClient(name, \n-Fals\n+Non\n e)%0A        if cl\n",
+            "lines": "160"
+        },
+        {
+            "label": "2025-12-04_00-33-42",
+            "content": "@@ -986,9 +986,8 @@\n     \n-#\n base\n",
+            "lines": "160"
+        },
+        {
+            "label": "2025-12-04_00-41-35",
+            "content": "@@ -982,16 +982,17 @@\n         \n+#\n base = s\n",
+            "lines": "160"
+        },
+        {
+            "label": "2025-12-04_00-43-19",
+            "content": "@@ -986,9 +986,8 @@\n     \n-#\n base\n",
+            "lines": "160"
+        },
+        {
+            "label": "2025-12-04_00-48-33",
+            "content": "@@ -970,24 +970,78 @@\n Dead=True):%0A\n+        #base = self.dead if inDead else self.clients%0A\n         for \n",
+            "lines": "160"
+        },
+        {
+            "label": "2025-12-04_00-49-33",
+            "content": "@@ -987,36 +987,28 @@\n    for c in \n+ba\n se\n-lf.clients\n :%0A          \n",
+            "lines": "159"
+        },
+        {
+            "label": "2025-12-04_00-50-44",
+            "content": "@@ -628,88 +628,27 @@\n bel \n-== \n+in %5B\n %22take%22\n-:%0A                total -= op.value%0A            elif op.label ==\n+,\n  %22plus%22\n+%5D\n :%0A  \n@@ -659,33 +659,33 @@\n           total \n-+\n+-\n = op.value%0A     \n",
+            "lines": "159"
+        },
+        {
+            "label": "2025-12-04_00-53-00",
+            "content": "@@ -2419,106 +2419,8 @@\n urn%0A\n-        historico = %5Bop for op in self.trans if op.client == name%5D%0A        cli.ops = historico%5B:%5D%0A\n     \n@@ -2535,30 +2535,30 @@\n         \n-self.t\n+aliveT\n rans = %5B\n op for o\n@@ -2549,18 +2549,25 @@\n rans = %5B\n-op\n+%5D%0A       \n  for op \n@@ -2579,16 +2579,29 @@\n lf.trans\n+:%0A           \n  if op.c\n@@ -2613,17 +2613,87 @@\n  != name\n-%5D\n+:%0A                aliveTrans.append(op)%0A        self.trans = aliveTrans\n %0A%0A    de\n",
+            "lines": "161"
+        },
+        {
+            "label": "2025-12-04_00-55-41",
+            "content": "@@ -2407,32 +2407,130 @@\n          return%0A\n+        historico = %5Bop for op in self.trans if op.client == name%5D%0A        cli.ops = historico%5B:%5D%0A\n         self.cli\n",
+            "lines": "159"
+        },
+        {
+            "label": "2025-12-04_00-56-52",
+            "content": "@@ -2419,106 +2419,8 @@\n urn%0A\n-        historico = %5Bop for op in self.trans if op.client == name%5D%0A        cli.ops = historico%5B:%5D%0A\n     \n@@ -2444,24 +2444,24 @@\n remove(cli)%0A\n+\n         self\n@@ -2624,26 +2624,22 @@\n         \n-juros_list\n+toKill\n  = %5B%5D%0A  \n@@ -2661,32 +2661,32 @@\n n self.clients:%0A\n+\n             juro\n@@ -2733,111 +2733,8 @@\n 99)%0A\n-            juros_list.append((cli, juros))%0A        toKill = %5B%5D%0A        for clli, juros in juros_list:%0A\n     \n",
+            "lines": "157"
+        },
+        {
+            "label": "2025-12-04_01-00-31",
+            "content": "@@ -2407,32 +2407,130 @@\n          return%0A\n+        historico = %5Bop for op in self.trans if op.client == name%5D%0A        cli.ops = historico%5B:%5D%0A\n         self.cli\n",
+            "lines": "162"
+        },
+        {
+            "label": "2025-12-04_01-00-44",
+            "content": "@@ -2419,106 +2419,8 @@\n urn%0A\n-        historico = %5Bop for op in self.trans if op.client == name%5D%0A        cli.ops = historico%5B:%5D%0A\n     \n@@ -2624,22 +2624,26 @@\n         \n-toKill\n+juros_list\n  = %5B%5D%0A  \n@@ -2733,16 +2733,119 @@\n 0.9999)%0A\n+            juros_list.append((cli, juros))%0A        toKill = %5B%5D%0A        for clli, juros in juros_list:%0A\n         \n",
+            "lines": "160"
+        },
+        {
+            "label": "2025-12-04_01-01-14",
+            "content": "@@ -2486,53 +2486,8 @@\n me%5D%0A\n-        historico.sort(key=lambda op: op.id)%0A\n     \n",
+            "lines": "159"
+        },
+        {
+            "label": "2025-12-04_01-04-04",
+            "content": "@@ -4462,29 +4462,8 @@\n %22)%0A%0A\n-if __name__ == %22__m%22%0A\n main\n",
+            "lines": "160"
+        },
+        {
+            "label": "2025-12-04_01-04-46",
+            "content": "@@ -4481,15 +4481,9 @@\n %22__m\n-ain__%22:\n+%22\n %0Amai\n",
+            "lines": "161"
+        },
+        {
+            "label": "2025-12-04_01-05-00",
+            "content": "@@ -440,12 +440,27 @@\n     \n-pass\n+self.ops.append(op)\n %0A%0A  \n@@ -1692,16 +1692,40 @@\n end(op)%0A\n+        client.addOp(op)\n %0A%0A    de\n@@ -4458,14 +4458,41 @@\n lido%22)%0A%0A\n+if __name__ == %22__main__%22:%0A\n main()\n",
+            "lines": "161"
+        },
+        {
+            "label": "2025-12-04_01-07-31",
+            "content": "@@ -440,27 +440,12 @@\n     \n-self.ops.append(op)\n+pass\n %0A%0A  \n@@ -1681,32 +1681,8 @@\n op)%0A\n-        client.addOp(op)\n %0A%0A  \n",
+            "lines": "160"
+        },
+        {
+            "label": "2025-12-04_01-07-44",
+            "content": "@@ -3154,54 +3154,8 @@\n %7D%22)%0A\n-        self.trans.sort(key=lambda op: op.id)%0A\n     \n",
+            "lines": "160"
+        },
+        {
+            "label": "2025-12-04_01-49-13",
+            "content": "@@ -3162,42 +3162,24 @@\n     \n-trans_sorted = sorted(self.trans, \n+self.trans.sort(\n key=\n@@ -3195,17 +3195,16 @@\n : op.id)\n- \n %0A       \n@@ -3218,20 +3218,18 @@\n  in \n+self.\n trans\n-_sorted\n :%0A  \n@@ -3367,19 +3367,59 @@\n int(f%22- \n-%7Bop\n+id:%7Bop.id%7D %7Bop.label%7D:%7Bop.client%7D %7Bop.value\n %7D%22)%0A%0A   \n",
+            "lines": "161"
+        },
+        {
+            "label": "2025-12-04_01-51-13",
+            "content": "@@ -3336,50 +3336,8 @@\n d%7D%22)\n- %0A            %0A        for d in self.dead:\n %0A   \n",
+            "lines": "161"
+        },
+        {
+            "label": "2025-12-04_01-52-39",
+            "content": "class Transaction:\n    def  __init__(self, tid, label, client, value):\n        self.id = tid\n        self.label = label\n        self.client = client\n        self.value = value\n\n    def __str__(self):\n        return f\"id:{self.id} {self.label}:{self.client} {self.value}\"\n\nclass Client:\n    def __init__(self, codename, limit):\n        self.codename = codename\n        self.limit = limit\n        self.ops = []\n\n    def addOp(self, op):\n        self.ops.append(op)\n\n    def getBalance(self):\n        total = 0\n        for op in self.ops:\n            if op.label == \"give\":\n                total += op.value\n            elif op.label == \"take\":\n                total -= op.value\n            elif op.label == \"plus\":\n                total += op.value\n        return total\n\n    def __str__(self):\n        return f\"{self.codename} {self.getBalance()}/{self.limit}\"\n\n\nclass Agiota:\n    def __init__(self):\n        self.clients = []\n        self.dead = []\n        self.trans = []\n        self.nextId = 0\n\n    def findClient(self, name, inDead=True):\n        for c in self.clients:\n            if c.codename == name:\n                return c\n        if inDead:\n            for c in self.dead:\n                if c.codename == name:\n                    return c\n        return None\n\n    def addClient(self, name, limit):\n        if self.findClient(name) is not None:\n            print(\"fail: cliente ja existe\")\n            return\n        self.clients.append(Client(name, limit))\n        self.clients.sort(key=lambda c: c.codename)\n\n    def newTransaction(self, label, client, value):\n        op = Transaction(self.nextId, label, client.codename, value)\n        self.nextId += 1\n        self.trans.append(op)\n        client.addOp(op)\n\n    def give(self, name, value):\n        cli = self.findClient(name, False)\n        if cli is None:\n            print(\"fail: cliente nao existe\")\n            return\n        if cli.getBalance() + value > cli.limit:\n            print(\"fail: limite excedido\")\n            return\n        self.newTransaction(\"give\", cli, value)\n\n    def take(self, name, value):\n        cli = self.findClient(name, False)\n        if cli is None:\n            print(\"fail: cliente nao existe\")\n            return\n        self.newTransaction(\"take\", cli, value)\n\n    def kill(self, name):\n        cli = self.findClient(name, False)\n        if cli is None:\n            print(\"fail: cliente nao existe\")\n            return\n        historico = [op for op in self.trans if op.client == name]\n        historico.sort(key=lambda op: op.id)\n        cli.ops = historico[:]\n        self.clients.remove(cli)\n        self.dead.append(cli)\n        self.dead.sort(key=lambda c: c.codename)\n        self.trans = [op for op in self.trans if op.client != name]\n\n    def plus(self):\n        toKill = []\n        for cli in self.clients:\n            juros = int((cli.getBalance() * 0.10) + 0.9999)\n            self.newTransaction(\"plus\", cli, juros)\n            if cli.getBalance() > cli.limit:\n                toKill.append(cli.codename)\n        for name in toKill:\n            self.kill(name)\n\n    def show(self):\n        for c in self.clients:\n            print(f\":) {c}\")\n        trans_sorted = sorted(self.trans, key=lambda op: op.id) \n        for op in trans_sorted:\n            print(f\"+ {op}\")\n        for d in self.dead:\n            print(f\":( {d}\") \n            \n        for d in self.dead:\n            for op in d.ops:\n                print(f\"- {op}\")\n\n    def showCli(self, name):\n        cli = self.findClient(name) or self.findClient(name, True)\n        if cli is None:\n            print(\"fail: cliente nao existe\")\n            return\n        print(cli)\n        for op in cli.ops:\n            print(f\"id:{op.id} {op.label}:{op.client} {op.value}\")\n\ndef main():\n    agiota = Agiota()\n    while True:\n        line = input().strip()\n        if line == \"\":\n            continue\n        print(\"$\" + line)\n        args = line.split()\n\n        if args[0] == \"end\":\n            break\n\n        elif args[0] == \"addCli\":\n            agiota.addClient(args[1], int(args[2]))\n\n        elif args[0] == \"give\":\n            agiota.give(args[1], int(args[2]))\n\n        elif args[0] == \"take\":\n            agiota.take(args[1], int(args[2]))\n\n        elif args[0] == \"show\":\n            agiota.show()\n\n        elif args[0] == \"showCli\":\n            agiota.showCli(args[1])\n\n        elif args[0] == \"kill\":\n            agiota.kill(args[1])\n\n        elif args[0] == \"plus\":\n            agiota.plus()\n\n        else:\n            print(\"fail: comando invalido\")\n\nmain()",
+            "lines": "163"
+        }
+    ]
+}

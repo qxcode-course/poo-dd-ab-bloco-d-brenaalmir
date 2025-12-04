@@ -1,0 +1,179 @@
+2025-12-03 01:11:15, MOVE, v:1, k:poo@agiota, mode:PICK
+2025-12-03 01:11:18, EXEC, v:1, k:poo@agiota, mode:FULL, rate:0, size:0
+2025-12-03 01:11:26, MOVE, v:1, k:poo@agiota, mode:BACK
+2025-12-03 01:11:33, MOVE, v:1, k:poo@petshop, mode:PICK
+2025-12-03 01:11:35, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:0
+2025-12-03 01:11:40, MOVE, v:1, k:poo@petshop, mode:BACK
+2025-12-03 01:11:45, MOVE, v:1, k:poo@porquinho, mode:PICK
+2025-12-03 01:11:47, EXEC, v:1, k:poo@porquinho, mode:FULL, rate:0, size:0
+2025-12-03 01:11:48, MOVE, v:1, k:poo@porquinho, mode:BACK
+2025-12-03 01:11:51, MOVE, v:1, k:poo@tarifas, mode:PICK
+2025-12-03 01:11:53, EXEC, v:1, k:poo@tarifas, mode:FULL, rate:0, size:0
+2025-12-03 01:11:54, MOVE, v:1, k:poo@tarifas, mode:BACK
+2025-12-03 01:12:02, MOVE, v:1, k:poo@agiota, mode:PICK
+2025-12-03 01:12:06, MOVE, v:1, k:poo@agiota, mode:BACK
+2025-12-03 01:12:12, MOVE, v:1, k:poo@agiota, mode:PICK
+2025-12-03 01:23:24, EXEC, v:1, k:poo@agiota, mode:FULL, rate:0, size:38
+2025-12-03 01:23:26, MOVE, v:1, k:poo@agiota, mode:BACK
+2025-12-03 01:23:50, MOVE, v:1, k:poo@petshop, mode:PICK
+2025-12-03 01:34:20, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:11
+2025-12-03 01:34:21, MOVE, v:1, k:poo@petshop, mode:BACK
+2025-12-03 01:34:35, MOVE, v:1, k:poo@porquinho, mode:PICK
+2025-12-03 01:37:23, EXEC, v:1, k:poo@porquinho, mode:FULL, rate:0, size:7
+2025-12-03 01:37:25, MOVE, v:1, k:poo@porquinho, mode:BACK
+2025-12-03 01:37:59, MOVE, v:1, k:poo@tarifas, mode:PICK
+2025-12-03 01:48:11, EXEC, v:1, k:poo@tarifas, mode:FULL, rate:0, size:8
+2025-12-03 01:48:13, MOVE, v:1, k:poo@tarifas, mode:BACK
+2025-12-03 01:48:25, MOVE, v:1, k:poo@porquinho, mode:PICK
+2025-12-03 01:49:12, EXEC, v:1, k:poo@porquinho, mode:FULL, rate:0
+2025-12-03 01:52:14, EXEC, v:1, k:poo@porquinho, mode:FULL, rate:0
+2025-12-03 01:52:18, MOVE, v:1, k:poo@porquinho, mode:BACK
+2025-12-03 01:52:23, MOVE, v:1, k:poo@porquinho, mode:PICK
+2025-12-03 02:12:35, EXEC, v:1, k:poo@porquinho, mode:FULL, rate:0
+2025-12-03 02:12:37, MOVE, v:1, k:poo@porquinho, mode:BACK
+2025-12-03 02:12:52, MOVE, v:1, k:poo@porquinho, mode:PICK
+2025-12-03 02:17:04, MOVE, v:1, k:poo@porquinho, mode:BACK
+2025-12-03 02:17:11, MOVE, v:1, k:poo@tarifas, mode:PICK
+2025-12-03 02:17:23, EXEC, v:1, k:poo@tarifas, mode:FULL, rate:0
+2025-12-03 09:46:03, MOVE, v:1, k:poo@agenda, mode:PICK
+2025-12-03 09:46:14, EXEC, v:1, k:poo@agenda, mode:FULL, rate:0, size:68
+2025-12-03 09:46:18, MOVE, v:1, k:poo@agenda, mode:BACK
+2025-12-03 09:46:28, MOVE, v:1, k:poo@agenda, mode:PICK
+2025-12-03 09:46:31, EXEC, v:1, k:poo@agenda, mode:FULL, rate:0
+2025-12-03 10:18:39, MOVE, v:1, k:poo@agenda, mode:PICK
+2025-12-03 10:18:42, EXEC, v:1, k:poo@agenda, mode:FULL, rate:0
+2025-12-03 10:23:57, EXEC, v:1, k:poo@agenda, mode:FULL, rate:0
+2025-12-03 10:23:59, MOVE, v:1, k:poo@agenda, mode:BACK
+2025-12-03 10:24:17, MOVE, v:1, k:poo@agiota, mode:PICK
+2025-12-03 10:24:26, EXEC, v:1, k:poo@agiota, mode:FULL, rate:0
+2025-12-03 10:59:51, MOVE, v:1, k:poo@agiota, mode:PICK
+2025-12-03 10:59:54, EXEC, v:1, k:poo@agiota, mode:FULL, rate:0
+2025-12-03 11:20:46, EXEC, v:1, k:poo@agiota, mode:FULL, rate:0
+2025-12-03 11:20:47, MOVE, v:1, k:poo@agiota, mode:BACK
+2025-12-03 11:20:59, MOVE, v:1, k:poo@petshop, mode:PICK
+2025-12-03 11:21:05, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0
+2025-12-03 13:17:03, MOVE, v:1, k:poo@agenda, mode:PICK
+2025-12-03 13:44:46, MOVE, v:1, k:poo@agenda, mode:PICK
+2025-12-03 14:08:38, EXEC, v:1, k:poo@agenda, mode:FULL, rate:0, size:156
+2025-12-03 14:09:08, EXEC, v:1, k:poo@agenda, mode:FULL, rate:0, size:156
+2025-12-03 14:09:09, EXEC, v:1, k:poo@agenda, mode:FULL, rate:0
+2025-12-03 14:13:04, EXEC, v:1, k:poo@agenda, mode:FULL, rate:0, size:156
+2025-12-03 14:13:06, EXEC, v:1, k:poo@agenda, mode:FULL, rate:0
+2025-12-03 14:14:51, EXEC, v:1, k:poo@agenda, mode:FULL, rate:0, size:156
+2025-12-03 14:16:59, EXEC, v:1, k:poo@agenda, mode:FULL, rate:0, size:156
+2025-12-03 14:17:00, EXEC, v:1, k:poo@agenda, mode:FULL, rate:0
+2025-12-03 14:20:05, EXEC, v:1, k:poo@agenda, mode:FULL, rate:100, size:156
+2025-12-03 14:20:10, MOVE, v:1, k:poo@agenda, mode:BACK
+2025-12-03 14:20:58, SELF, v:1, k:poo@agenda, rate:100, human:_, iagen:_, guide:_, alone:7, study:130
+2025-12-03 14:21:03, MOVE, v:1, k:poo@agiota, mode:PICK
+2025-12-03 14:21:07, EXEC, v:1, k:poo@agiota, mode:FULL, rate:0
+2025-12-03 18:20:30, MOVE, v:1, k:poo@agiota, mode:PICK
+2025-12-03 18:20:33, EXEC, v:1, k:poo@agiota, mode:FULL, rate:0, size:70
+2025-12-03 18:33:10, EXEC, v:1, k:poo@agiota, mode:FULL, rate:0, size:101
+2025-12-03 18:33:13, MOVE, v:1, k:poo@agiota, mode:BACK
+2025-12-03 18:34:19, MOVE, v:1, k:poo@petshop, mode:PICK
+2025-12-03 18:34:22, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0
+2025-12-03 18:57:45, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:12
+2025-12-03 18:57:47, MOVE, v:1, k:poo@petshop, mode:BACK
+2025-12-03 18:57:57, MOVE, v:1, k:poo@petshop, mode:PICK
+2025-12-03 19:02:31, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0
+2025-12-03 19:35:02, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:93
+2025-12-03 19:35:03, MOVE, v:1, k:poo@petshop, mode:BACK
+2025-12-03 19:35:31, MOVE, v:1, k:poo@petshop, mode:PICK
+2025-12-03 19:35:33, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0
+2025-12-03 20:02:28, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:186
+2025-12-03 20:02:30, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0
+2025-12-03 20:02:32, MOVE, v:1, k:poo@petshop, mode:BACK
+2025-12-03 20:03:27, MOVE, v:1, k:poo@petshop, mode:PICK
+2025-12-03 20:03:29, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0
+2025-12-03 20:15:52, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:215
+2025-12-03 20:15:53, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0
+2025-12-03 20:17:18, EXEC, v:1, k:poo@petshop, mode:FULL, rate:25, size:215
+2025-12-03 20:19:32, EXEC, v:1, k:poo@petshop, mode:FULL, rate:25, size:216
+2025-12-03 20:20:27, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:216
+2025-12-03 20:21:47, EXEC, v:1, k:poo@petshop, mode:FULL, rate:25, size:216
+2025-12-03 20:22:58, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:216
+2025-12-03 20:26:43, EXEC, v:1, k:poo@petshop, mode:FULL, rate:25, size:213
+2025-12-03 20:28:01, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:213
+2025-12-03 20:28:10, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:213
+2025-12-03 20:28:28, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:213
+2025-12-03 20:28:36, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:213
+2025-12-03 20:28:48, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:213
+2025-12-03 20:29:21, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:213
+2025-12-03 20:31:04, EXEC, v:1, k:poo@petshop, mode:FULL, rate:25, size:213
+2025-12-03 20:33:55, EXEC, v:1, k:poo@petshop, mode:FULL, rate:25, size:230
+2025-12-03 20:34:12, EXEC, v:1, k:poo@petshop, mode:FULL, rate:25, size:213
+2025-12-03 20:39:30, EXEC, v:1, k:poo@petshop, mode:FULL, rate:50, size:213
+2025-12-03 20:41:23, EXEC, v:1, k:poo@petshop, mode:FULL, rate:25, size:213
+2025-12-03 20:41:34, EXEC, v:1, k:poo@petshop, mode:FULL, rate:50, size:213
+2025-12-03 20:41:50, EXEC, v:1, k:poo@petshop, mode:FULL, rate:50
+2025-12-03 20:41:52, MOVE, v:1, k:poo@petshop, mode:BACK
+2025-12-03 20:42:05, MOVE, v:1, k:poo@petshop, mode:PICK
+2025-12-03 20:42:06, EXEC, v:1, k:poo@petshop, mode:FULL, rate:50
+2025-12-03 20:44:38, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:213
+2025-12-03 20:44:50, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:213
+2025-12-03 20:45:05, EXEC, v:1, k:poo@petshop, mode:FULL, rate:50, size:213
+2025-12-03 20:45:24, EXEC, v:1, k:poo@petshop, mode:FULL, rate:50, size:213
+2025-12-03 20:45:33, EXEC, v:1, k:poo@petshop, mode:FULL, rate:50, size:213
+2025-12-03 20:45:50, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:213
+2025-12-03 20:45:58, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:213
+2025-12-03 20:46:07, EXEC, v:1, k:poo@petshop, mode:FULL, rate:25, size:213
+2025-12-03 20:46:29, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:213
+2025-12-03 20:47:21, EXEC, v:1, k:poo@petshop, mode:FULL, rate:25, size:213
+2025-12-03 20:50:20, EXEC, v:1, k:poo@petshop, mode:FULL, rate:25, size:216
+2025-12-03 20:50:33, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:216
+2025-12-03 20:50:44, EXEC, v:1, k:poo@petshop, mode:FULL, rate:75, size:216
+2025-12-03 21:40:33, MOVE, v:1, k:poo@tarifas, mode:PICK
+2025-12-03 22:00:45, MOVE, v:1, k:poo@tarifas, mode:BACK
+2025-12-03 22:00:50, MOVE, v:1, k:poo@tarifas, mode:PICK
+2025-12-03 22:00:51, EXEC, v:1, k:poo@tarifas, mode:FULL, rate:0
+2025-12-03 22:00:52, MOVE, v:1, k:poo@tarifas, mode:BACK
+2025-12-03 22:00:58, MOVE, v:1, k:poo@petshop, mode:PICK
+2025-12-03 22:01:00, EXEC, v:1, k:poo@petshop, mode:FULL, rate:75
+2025-12-03 22:32:25, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:255
+2025-12-03 22:32:26, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0
+2025-12-03 22:37:18, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:3265
+2025-12-03 22:37:19, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0
+2025-12-03 22:38:21, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:3265
+2025-12-03 22:38:22, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0
+2025-12-03 22:38:36, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:3265
+2025-12-03 22:41:03, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:3183
+2025-12-03 22:43:09, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:430
+2025-12-03 22:43:10, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0
+2025-12-03 22:45:37, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:255
+2025-12-03 22:49:04, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:255
+2025-12-03 22:49:05, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0
+2025-12-03 22:52:57, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:254
+2025-12-03 22:53:25, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:197
+2025-12-03 22:53:26, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0
+2025-12-03 23:00:48, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:188
+2025-12-03 23:01:32, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:188
+2025-12-03 23:01:33, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0
+2025-12-03 23:02:34, EXEC, v:1, k:poo@petshop, mode:FULL, rate:25, size:189
+2025-12-03 23:02:37, EXEC, v:1, k:poo@petshop, mode:FULL, rate:25
+2025-12-03 23:08:18, EXEC, v:1, k:poo@petshop, mode:FULL, rate:50, size:201
+2025-12-03 23:09:52, EXEC, v:1, k:poo@petshop, mode:FULL, rate:75, size:201
+2025-12-03 23:12:44, EXEC, v:1, k:poo@petshop, mode:FULL, rate:75
+2025-12-03 23:18:23, EXEC, v:1, k:poo@petshop, mode:FULL, rate:50, size:201
+2025-12-03 23:18:32, EXEC, v:1, k:poo@petshop, mode:FULL, rate:75, size:201
+2025-12-03 23:21:05, EXEC, v:1, k:poo@petshop, mode:FULL, rate:50, size:224
+2025-12-03 23:21:23, MOVE, v:1, k:poo@petshop, mode:BACK
+2025-12-03 23:22:25, MOVE, v:1, k:poo@petshop, mode:PICK
+2025-12-03 23:22:26, EXEC, v:1, k:poo@petshop, mode:FULL, rate:75, size:202
+2025-12-03 23:33:48, EXEC, v:1, k:poo@petshop, mode:FULL, rate:50, size:202
+2025-12-03 23:36:09, EXEC, v:1, k:poo@petshop, mode:FULL, rate:75, size:204
+2025-12-03 23:38:27, EXEC, v:1, k:poo@petshop, mode:FULL, rate:25, size:201
+2025-12-03 23:41:08, EXEC, v:1, k:poo@petshop, mode:FULL, rate:25, size:198
+2025-12-03 23:41:10, EXEC, v:1, k:poo@petshop, mode:FULL, rate:25
+2025-12-03 23:42:15, EXEC, v:1, k:poo@petshop, mode:FULL, rate:75, size:204
+2025-12-03 23:45:48, EXEC, v:1, k:poo@petshop, mode:FULL, rate:25, size:204
+2025-12-03 23:45:58, EXEC, v:1, k:poo@petshop, mode:FULL, rate:75, size:204
+2025-12-03 23:47:13, EXEC, v:1, k:poo@petshop, mode:FULL, rate:75
+2025-12-03 23:51:03, EXEC, v:1, k:poo@petshop, mode:FULL, rate:75, size:202
+2025-12-03 23:51:06, EXEC, v:1, k:poo@petshop, mode:FULL, rate:75
+2025-12-03 23:51:17, EXEC, v:1, k:poo@petshop, mode:FULL, rate:75, size:201
+2025-12-03 23:54:09, EXEC, v:1, k:poo@petshop, mode:FULL, rate:75
+2025-12-03 23:56:30, EXEC, v:1, k:poo@petshop, mode:FULL, rate:25, size:198
+2025-12-03 23:56:40, EXEC, v:1, k:poo@petshop, mode:FULL, rate:50, size:198
+2025-12-03 23:57:54, EXEC, v:1, k:poo@petshop, mode:FULL, rate:25, size:198
+2025-12-03 23:58:57, EXEC, v:1, k:poo@petshop, mode:FULL, rate:75, size:201

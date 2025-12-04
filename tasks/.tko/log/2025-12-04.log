@@ -1,0 +1,69 @@
+2025-12-04 00:02:37, EXEC, v:1, k:poo@petshop, mode:FULL, rate:50, size:199
+2025-12-04 00:02:47, EXEC, v:1, k:poo@petshop, mode:FULL, rate:75, size:201
+2025-12-04 00:03:15, MOVE, v:1, k:poo@petshop, mode:BACK
+2025-12-04 00:03:24, MOVE, v:1, k:poo@agiota, mode:PICK
+2025-12-04 00:17:53, EXEC, v:1, k:poo@agiota, mode:FULL, rate:0, size:157
+2025-12-04 00:23:51, EXEC, v:1, k:poo@agiota, mode:FULL, rate:0, size:157
+2025-12-04 00:23:52, EXEC, v:1, k:poo@agiota, mode:FULL, rate:0
+2025-12-04 00:25:13, EXEC, v:1, k:poo@agiota, mode:FULL, rate:0, size:156
+2025-12-04 00:25:15, EXEC, v:1, k:poo@agiota, mode:FULL, rate:0
+2025-12-04 00:31:43, EXEC, v:1, k:poo@agiota, mode:FULL, rate:0, size:160
+2025-12-04 00:33:42, EXEC, v:1, k:poo@agiota, mode:FULL, rate:20, size:160
+2025-12-04 00:41:35, EXEC, v:1, k:poo@agiota, mode:FULL, rate:0, size:160
+2025-12-04 00:41:37, EXEC, v:1, k:poo@agiota, mode:FULL, rate:0
+2025-12-04 00:43:19, EXEC, v:1, k:poo@agiota, mode:FULL, rate:20, size:160
+2025-12-04 00:48:33, EXEC, v:1, k:poo@agiota, mode:FULL, rate:0, size:160
+2025-12-04 00:49:33, EXEC, v:1, k:poo@agiota, mode:FULL, rate:0, size:159
+2025-12-04 00:49:34, EXEC, v:1, k:poo@agiota, mode:FULL, rate:0
+2025-12-04 00:50:44, EXEC, v:1, k:poo@agiota, mode:FULL, rate:80, size:159
+2025-12-04 00:53:00, EXEC, v:1, k:poo@agiota, mode:FULL, rate:90, size:161
+2025-12-04 00:55:41, EXEC, v:1, k:poo@agiota, mode:FULL, rate:90, size:159
+2025-12-04 00:55:43, EXEC, v:1, k:poo@agiota, mode:FULL, rate:90
+2025-12-04 00:56:52, EXEC, v:1, k:poo@agiota, mode:FULL, rate:90, size:157
+2025-12-04 01:00:31, EXEC, v:1, k:poo@agiota, mode:FULL, rate:80, size:162
+2025-12-04 01:00:44, EXEC, v:1, k:poo@agiota, mode:FULL, rate:80, size:160
+2025-12-04 01:01:14, EXEC, v:1, k:poo@agiota, mode:FULL, rate:90, size:159
+2025-12-04 01:04:04, EXEC, v:1, k:poo@agiota, mode:FULL, rate:90, size:160
+2025-12-04 01:04:46, EXEC, v:1, k:poo@agiota, mode:FULL, rate:0, size:161
+2025-12-04 01:04:49, EXEC, v:1, k:poo@agiota, mode:FULL, rate:0
+2025-12-04 01:04:49, EXEC, v:1, k:poo@agiota, mode:FULL, rate:0
+2025-12-04 01:04:50, EXEC, v:1, k:poo@agiota, mode:FULL, rate:0
+2025-12-04 01:05:00, EXEC, v:1, k:poo@agiota, mode:FULL, rate:0, size:161
+2025-12-04 01:07:31, EXEC, v:1, k:poo@agiota, mode:FULL, rate:30, size:160
+2025-12-04 01:07:44, EXEC, v:1, k:poo@agiota, mode:FULL, rate:90, size:160
+2025-12-04 01:08:08, MOVE, v:1, k:poo@agiota, mode:BACK
+2025-12-04 01:08:14, MOVE, v:1, k:poo@porquinho, mode:PICK
+2025-12-04 01:08:16, MOVE, v:1, k:poo@porquinho, mode:BACK
+2025-12-04 01:08:36, MOVE, v:1, k:poo@porquinho, mode:PICK
+2025-12-04 01:32:30, EXEC, v:1, k:poo@porquinho, mode:FULL, rate:0, size:174
+2025-12-04 01:33:55, EXEC, v:1, k:poo@porquinho, mode:FULL, rate:0, size:173
+2025-12-04 01:33:57, EXEC, v:1, k:poo@porquinho, mode:FULL, rate:0
+2025-12-04 01:35:07, EXEC, v:1, k:poo@porquinho, mode:FULL, rate:0, size:173
+2025-12-04 01:35:54, EXEC, v:1, k:poo@porquinho, mode:FULL, rate:0, size:177
+2025-12-04 01:36:55, EXEC, v:1, k:poo@porquinho, mode:FULL, rate:0, size:177
+2025-12-04 01:36:56, EXEC, v:1, k:poo@porquinho, mode:FULL, rate:0
+2025-12-04 01:38:00, EXEC, v:1, k:poo@porquinho, mode:FULL, rate:0, size:174
+2025-12-04 01:39:28, EXEC, v:1, k:poo@porquinho, mode:FULL, rate:0, size:175
+2025-12-04 01:39:54, EXEC, v:1, k:poo@porquinho, mode:FULL, rate:0, size:174
+2025-12-04 01:40:43, EXEC, v:1, k:poo@porquinho, mode:FULL, rate:0, size:167
+2025-12-04 01:43:40, EXEC, v:1, k:poo@porquinho, mode:FULL, rate:100, size:167
+2025-12-04 01:43:43, MOVE, v:1, k:poo@porquinho, mode:BACK
+2025-12-04 01:43:51, MOVE, v:1, k:poo@agiota, mode:PICK
+2025-12-04 01:44:32, EXEC, v:1, k:poo@agiota, mode:FULL, rate:90
+2025-12-04 01:49:13, EXEC, v:1, k:poo@agiota, mode:FULL, rate:90, size:161
+2025-12-04 01:51:13, EXEC, v:1, k:poo@agiota, mode:FULL, rate:90, size:161
+2025-12-04 01:52:39, EXEC, v:1, k:poo@agiota, mode:FULL, rate:100, size:163
+2025-12-04 01:52:46, MOVE, v:1, k:poo@agiota, mode:BACK
+2025-12-04 01:52:54, MOVE, v:1, k:poo@petshop, mode:PICK
+2025-12-04 01:53:28, EXEC, v:1, k:poo@petshop, mode:FULL, rate:75
+2025-12-04 01:55:17, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0, size:218
+2025-12-04 01:55:19, EXEC, v:1, k:poo@petshop, mode:FULL, rate:0
+2025-12-04 01:56:45, EXEC, v:1, k:poo@petshop, mode:FULL, rate:75, size:216
+2025-12-04 01:57:50, EXEC, v:1, k:poo@petshop, mode:FULL, rate:50, size:228
+2025-12-04 01:58:03, EXEC, v:1, k:poo@petshop, mode:FULL, rate:75, size:201
+2025-12-04 01:58:11, MOVE, v:1, k:poo@petshop, mode:BACK
+2025-12-04 01:59:21, SELF, v:1, k:poo@agiota, rate:100, human:_, iagen:_, guide:_, alone:7, study:180
+2025-12-04 02:00:30, SELF, v:1, k:poo@petshop, rate:75, human:_, iagen:_, guide:_, alone:8, study:280
+2025-12-04 02:01:07, SELF, v:1, k:poo@porquinho, rate:100, human:_, guide:_, alone:8, study:80
+2025-12-04 02:02:27, MOVE, v:1, k:poo@tarifas, mode:PICK
+2025-12-04 02:02:55, MOVE, v:1, k:poo@tarifas, mode:BACK
